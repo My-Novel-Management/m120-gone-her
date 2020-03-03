@@ -14,7 +14,7 @@ from config import PERSONS, AREAS, STAGES, DAYS, TIMES, ITEMS, WORDS, RUBIS, LAY
 ## assets
 from storybuilder.assets import basic, accessory
 ## local files
-from src.chapter.main import ch_tmp
+from src.chapter.main import ch_main
 
 ## define alias
 W = Writer
@@ -52,10 +52,10 @@ def create_world():
     w.setAssets(basic.ASSET)
     w.setAssets(accessory.ASSET)
     w.buildDB(PERSONS,
-            AREAS, STAGES, ITEMS, DAYS, TIMES, WORDS,
+            AREAS, STAGES, DAYS, TIMES, ITEMS, WORDS,
             RUBIS, LAYERS)
     w.setBaseDate(2020)
-    w.setBaseArea("Tokyo")
+    w.setBaseArea("Sapporo")
     # set textures
     # w.entryBlock()
     # w.entryHistory()
@@ -67,7 +67,7 @@ def create_world():
 def main(): # pragma: no cover
     w = create_world()
     return w.build(
-            #ch_tmp(w),
+            ch_main(w),
             )
 
 

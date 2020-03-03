@@ -29,18 +29,24 @@
 
 PERSONS = (
         # Tag / 氏,名 / 歳 / 誕生日 / 性別 / 職業 / 呼称 / 紹介
+        ("yuki", "由季", "加賀美,由季", 17,(2,20), "female", "学生", "me:わたし"),
+        ("arisu", "亜里守", "有村,亜里守", 18,(9,9), "female", "学生", "me:私"),
         )
 
 AREAS = (
         # Tag / 名前 / x,y / 備考
+        ("Sapporo", "札幌", 14135,4306),
         )
 
 STAGES = (
         # Tag / 名前 / Area / 紹介
+        ("school", "聖部女学院", "Sapporo", "主要舞台"),
+        ("dormitory", "寄宿舎", "Sapporo"),
         )
 
 DAYS = (
         # Tag / 名前 / 月 / 日 / 年
+        ("goodbye", "彼女が出ていった日", 3,2,2020),
         )
 
 TIMES = (

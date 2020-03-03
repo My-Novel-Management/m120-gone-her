@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Chapter: story 1
+"""Chapter: main
 """
 ## path
 import os
@@ -18,8 +18,11 @@ _ = W.getWho()
 
 ## scenes
 def sc_tmp(w: World):
+    yuki, arisu = W(w.yuki), W(w.arisu)
     return w.scene("Sc: xxx",
-            area=w.Tokyo,
+            camera=w.yuki,
+            stage=w.on_school,
+            day=w.in_goodbye, time=w.at_afternoon,
             )
 
 ## episode
@@ -29,7 +32,7 @@ def ep_tmp(w: World):
             )
 
 ## chapter
-def ch_tmp(w: World):
-    return w.chapter("Ch: xxx",
+def ch_main(w: World):
+    return w.chapter("main",
             ep_tmp(w),
             )
