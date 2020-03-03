@@ -47,7 +47,7 @@ _ = Writer.getWho()
 def create_world():
     """Create a world.
     """
-    w = World("title")
+    w = World("そして彼女は消えた")
     w.setCommonData()
     w.setAssets(basic.ASSET)
     w.setAssets(accessory.ASSET)
@@ -60,14 +60,14 @@ def create_world():
     # w.entryBlock()
     # w.entryHistory()
     # w.entryLifeNote()
-    w.setOutline("__outline__")
+    w.setOutline("女性だけの寄宿学校。そこで憧れていた彼女が消えた。その時に気づいた気持ちに彼女は名前をつけた")
     return w
 
 
 def main(): # pragma: no cover
     w = create_world()
     return w.build(
-            ch_tmp(w),
+            #ch_tmp(w),
             )
 
 

@@ -19,6 +19,7 @@ _ = W.getWho()
 ## scenes
 def sc_tmp(w: World):
     return w.scene("Sc: xxx",
+            area=w.Tokyo,
             )
 
 ## episode
