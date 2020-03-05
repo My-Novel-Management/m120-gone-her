@@ -10,29 +10,22 @@ sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from storybuilder.builder.writer import Writer
 ## local files
-
+from src.chapter.e1_vanish import ep_vanished
+from src.chapter.e2_reason import ep_reason
+from src.chapter.e3_feelname import ep_feelingnama
 
 ## define alias
 W = Writer
 _ = W.getWho()
 
-## scenes
-def sc_tmp(w: World):
-    yuki, arisu = W(w.yuki), W(w.arisu)
-    return w.scene("Sc: xxx",
-            camera=w.yuki,
-            stage=w.on_school,
-            day=w.in_goodbye, time=w.at_afternoon,
-            )
-
-## episode
-def ep_tmp(w: World):
-    return w.episode("Ep: xxx",
-            sc_tmp(w),
-            )
-
 ## chapter
 def ch_main(w: World):
     return w.chapter("main",
-            ep_tmp(w),
-            )
+            ep_vanished(w),
+            ep_reason(w),
+            ep_feelingnama(w),
+            ## NOTE
+            ##  - 彼女が消えた
+            ##  - その事情を探り、どうやら誰かの心ない書き込みにより転校したことを知る
+            ##  - そこまで必死に探した自分の気持に、名前をつけた
+            note="憧れていた$arisuが突然学校からいなくなり、ぽっかりと開いたところに残っていた気持ちを見つけた")

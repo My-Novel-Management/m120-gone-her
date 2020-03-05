@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.0] - 2020-03-05
+### Added
+- plot
+
 ## [0.1.0] - 2020-03-03
 ### Added
 - Readme: outline
@@ -16,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - README one line implemented.
 
 
-[Unreleased]: https://github.com/My-Novel-Management/m120-gone-her/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/My-Novel-Management/m120-gone-her/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/My-Novel-Management/m120-gone-her/releases/v0.2.0
 [0.1.0]: https://github.com/My-Novel-Management/m120-gone-her/releases/v0.1.0
 [0.0.1]: https://github.com/My-Novel-Management/m120-gone-her/releases/v0.0.1
