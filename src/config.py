@@ -35,25 +35,35 @@ PERSONS = (
         ("suzaki", "須崎", "須崎,麻紀", 18,(1,1), "female", "学生", "me:あたし"),
         ## 学校
         ("fran", "フラン", "", 56,(1,1), "male", "司書", "me:ワタシ"),
+        ## その他
+        ("student", "女子生徒", "", 17,(1,1), "female", "me:私"),
         )
+BASE_X = 14135
+BASE_Y = 4306
 
 AREAS = (
         # Tag / 名前 / x,y / 備考
         ("Sapporo", "札幌", 14135,4306),
+        ("InSchhool", "学校内", BASE_X + 10, BASE_Y + 10),
+        ("InDormitory", "寄宿舎内", BASE_X + 8, BASE_Y + 10),
         )
 
 STAGES = (
         # Tag / 名前 / Area / 紹介
+        ("ryaku_school", "聖女"),
         ("school", "聖部女学院", "Sapporo", "主要舞台"),
         ("dormitory", "寄宿舎", "Sapporo"),
-        ("classroom", "教室"),
-        ("herclass", "先輩の教室"),
-        ("library", "図書室"),
-        ("ground", "校庭"),
-        ("backyard", "裏庭"),
-        ("lounge", "談話室"),
-        ("myroom", "由季の部屋"),
-        ("herroom", "亜里守の部屋"),
+        ## 学校
+        ("classroom", "教室", "InSchool"),
+        ("herclass", "先輩の教室", "InSchool"),
+        ("backyard", "裏庭", "InSchool"),
+        ("library", "図書室", "InSchool"),
+        ("ground", "校庭", "InSchool"),
+        ("corridor", "廊下", "InSchool"),
+        ## 寄宿舎
+        ("lounge", "談話室", "InDormitory"),
+        ("myroom", "由季の部屋", "InDormitory"),
+        ("herroom", "亜里守の部屋", "InDormitory"),
         )
 
 DAYS = (
@@ -72,6 +82,19 @@ TIMES = (
 
 ITEMS = (
         # Tag / 名前 / 紹介
+        ("bookmark", "百合の栞"),
+        ## 小物
+        ("bed", "ベッド"),
+        ("blackboard", "黒板"),
+        ("book", "本"),
+        ("bookshelf", "本棚"),
+        ("chair", "椅子"),
+        ("chalk", "チョーク"),
+        ("desk", "机"),
+        ("notebook", "ノート"),
+        ("shelf", "棚"),
+        ("textbook", "教科書"),
+        ("schooluni", "制服"),
         )
 
 WORDS = (

@@ -25,6 +25,7 @@ def sc_noher_days(w: World):
                 "$arisuがいなくなった、という噂には色々な尾ひれがついていた"),
             yuki.do("でも今朝、誰かが言っていた",
                 "退学した、と"),
+            w.eventPoint("$arisu失踪", "退学だった"),
             yuki.think("理由も何も分からないし、誰にも事情を伝えていないらしい"),
             yuki.think("おそらく数日、せめて一月くらい経てば誰も話題にしなくなる",
                 "話題の流行の移り変わりは早い",
@@ -33,6 +34,8 @@ def sc_noher_days(w: World):
             yuki.think("でも、なぜだろう",
                 "$Sはぽっかりと穴が開いたように、そこにまるで彼女が埋まっていたかのように、",
                 "しくしくと胸が痛んだ"),
+            ## NOTE
+            ##  彼女がいなくなって数日後、彼女が失踪したのではなく退学したと知る
             camera=w.yuki,
             stage=w.on_classroom_int,
             day=w.in_noherday, time=w.at_midmorning,
@@ -53,7 +56,9 @@ def sc_searching(w: World):
                 "それだけ彼女の存在が大きかったのだ"),
             yuki.hear("と、生徒の一人が声をあげる"),
             suzaki.be(),
+            w.comment("$suzakiは何か特徴的な外見を出しておく。最初の時にそれとなく触れ、彼女の信者であったことを思わせる"),
             suzaki.talk("誰が$arisuさんを追い出したんだよ！"),
+            w.eventPoint("$arisu失踪", "追い出された"),
             yuki.think("どういうことなんだろう、と思う"),
             yuki.explain("話の内容を聞くと、彼女の人気に嫉妬した誰かが彼女を傷つけたんじゃないのか、という話だった",
                 "けれどそんな兆候はなく、確かに陰口こそあったろうが、彼女は誰も傷つけない",
@@ -61,8 +66,11 @@ def sc_searching(w: World):
                 "もちろんそれでも嫉妬心は生まれるだろう",
                 "でも、彼女がそういった陰口で突然消えるとは思えなかった"),
             suzaki.talk("じゃあ、どうして$arisuさんはいなくなったの？"),
+            w.eventPoint("$arisu失踪", "裏掲示板の存在"),
             yuki.do("誰も答えられない",
                 "答えは誰も知らないのだ"),
+            ## NOTE
+            ##  捜索しよう、調べよう！ではなく、習慣で覗きにきてしまい、そこで情報を聞いて
             stage=w.on_school,
             day=w.in_search, time=w.at_noon,
             )
@@ -70,8 +78,11 @@ def sc_searching(w: World):
 def sc_underground(w: World):
     yuki, arisu = W(w.yuki), W(w.arisu)
     fran = W(w.fran)
+    inside = W(w.inside)
     return w.scene("裏掲示板の存在",
+            w.comment("調べようとしたが結局何ができる訳でもなく、徒労で、惰性で図書室にくる"),
             yuki.come("放課後、図書室にやってくる"),
+            inside.look("＜暗くじめじめした印象／本が並ぶが、生徒はいない＞"),
             yuki.do("利用率はあまり高くない",
                 "場所が遠いし、暗くて、あまり歓迎されない",
                 "何より司書の男の人が誰も苦手だった"),
@@ -113,6 +124,9 @@ def sc_underground(w: World):
             yuki.do("そしてもうひとつ",
                 "それは明らかに$arisuの字と分かる細く丁寧な文字で、何故か$Sの名前があった"),
             yuki.do("それをちぎり取って、逃げ出す"),
+            ## NOTE
+            ##  図書室初出。ここだけなので、不穏さと由季やアリスの心の中の表現としての空間演出にする
+            ##  誰にも隠した気持ちがある、ということ
             stage=w.on_library_int,
             day=w.in_research, time=w.at_afterschool,
             )
@@ -123,6 +137,8 @@ def sc_one_word(w: World):
             yuki.come("慌てて自分の部屋に戻ってくる"),
             yuki.do("破ってきたページを見てみる",
                 "それを見て、あの言葉が彼女を傷つけたと知る"),
+            ## NOTE
+            ##  この後三年の教室だが、ちょっと唐突感あるので、感情の流れでフックを作っておく
             stage=w.on_myroom_int,
             )
 

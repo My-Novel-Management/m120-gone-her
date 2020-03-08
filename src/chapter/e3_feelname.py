@@ -19,8 +19,15 @@ _ = W.getWho()
 ## scenes
 def sc_real_feeling(w: World):
     yuki, arisu = W(w.yuki), W(w.arisu)
+    inside = W(w.inside)
     return w.scene("彼女の本心",
             yuki.come(),
+            inside.look("空っぽの教室"),
+            yuki.think("彼女がいた当時なら誰かが残ってずっと$arisuの残り香がそこにあった",
+                "でも今は誰もいない",
+                "まるで彼女が全員の気持ちを連れ去ってしまったかのよう"),
+            w.comment("紹介文が剥がされて、穴が開いているのを見ること"),
+            inside.look("一つだけ紹介文が剥ぎ取られ、空間が空いている"),
             yuki.do("彼女の机に座り、ここで彼女がどんな気持ちだったのかを想像する"),
             yuki.do("机に触れる",
                 "普段の彼女を想像する", "目を閉じる"),
@@ -39,6 +46,8 @@ def sc_real_feeling(w: World):
             yuki.do("部屋でゴミ箱から盗んだ紙を広げる",
                 "そこには『誰かに迷惑をかける存在には、なりたくない』と書かれていた"),
             yuki.think("そのときの彼女の気持ちを考える"),
+            ## NOTE
+            ##  誰もいない教室。これは最初の三年の教室との対比。いつもなら賑わっていた
             camera=w.yuki,
             stage=w.on_classroom_int,
             day=w.in_findfeel, time=w.at_evening,
@@ -64,7 +73,11 @@ def sc_naming(w: World):
             yuki.think("そっと送られていたメッセージを思い出す"),
             yuki.talk("デッド・リリィ……",
                 "この気持ち、デッド・リリィだ"),
+            yuki.do("思い切り叫んだ",
+                "訳も分からず、それでも何かを声にしないとやっていられなかった"),
             yuki.do("そこには皺くしゃになった百合の栞が握られていた"),
+            ## NOTE
+            ##  一応ラストで叫ぶ。そこへの気持ちの盛り上がりをうまく作る
             )
 
 ## episode
