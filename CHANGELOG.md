@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-03-10
+### Fixed
+- Production
+
 ## [0.5.0] - 2020-03-10
 ### Added
 - Draft
@@ -32,7 +36,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - README one line implemented.
 
 
-[Unreleased]: https://github.com/My-Novel-Management/m120-gone-her/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/My-Novel-Management/m120-gone-her/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/My-Novel-Management/m120-gone-her/releases/v1.0.0
 [0.5.0]: https://github.com/My-Novel-Management/m120-gone-her/releases/v0.5.0
 [0.4.0]: https://github.com/My-Novel-Management/m120-gone-her/releases/v0.4.0
 [0.3.0]: https://github.com/My-Novel-Management/m120-gone-her/releases/v0.3.0
