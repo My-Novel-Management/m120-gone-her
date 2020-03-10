@@ -36,6 +36,7 @@ PERSONS = (
         ## 学校
         ("fran", "フラン", "", 56,(1,1), "male", "司書", "me:ワタシ"),
         ## その他
+        ("teacher", "教師", "", 35,(1,1), "male", "教師", "me:私"),
         ("student", "女子生徒", "", 17,(1,1), "female", "me:私"),
         )
 BASE_X = 14135
@@ -44,7 +45,7 @@ BASE_Y = 4306
 AREAS = (
         # Tag / 名前 / x,y / 備考
         ("Sapporo", "札幌", 14135,4306),
-        ("InSchhool", "学校内", BASE_X + 10, BASE_Y + 10),
+        ("InSchool", "学校内", BASE_X + 10, BASE_Y + 10),
         ("InDormitory", "寄宿舎内", BASE_X + 8, BASE_Y + 10),
         )
 
@@ -99,6 +100,7 @@ ITEMS = (
 
 WORDS = (
         # Tag / 名前 / 紹介
+        ("noteword001", "あの子の代筆自己紹介文、最低だった"),
         )
 
 RUBIS = (
